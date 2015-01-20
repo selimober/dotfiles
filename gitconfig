@@ -1,0 +1,7 @@
+[user]
+   name = Selim Ober
+   email = selim.ober@gmail.com
+[gc]
+   auto = 1
+[push]
+   default = matching

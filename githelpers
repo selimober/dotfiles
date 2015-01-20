@@ -1,0 +1,30 @@
+#!/bin/bash
+# vim: ft=sh
+
+HASH="%C(yellow)%h%Creset"
+RELATIVE_TIME="%C(green)%ar%Creset"
+AUTHOR="%C(blue)%an%Creset"
+REFS="%C(red)%d%Creset"
+SUBJECT="%s"
+
+FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+
+show_git_head() {
+   pretty_git_log -1
+   git show -p --pretty="tformat:"
+}
+
+pretty_git_log() {
+   git log --abbrev-commit --decorate --date=relative --pretty="tformat:${FORMAT}" $* |
+      sed -Ee 's/(second[s]?|minute[s]?|hour[s]?|day[s]?|week[s]?|month[s]?|year[s]?) ago/\1/' |
+      sed -Ee 's/\*[[:space:]]+/▪ /g' |
+      # Line columns up based on } delimiter
+      column -s '}' -t |
+      # Page only if we need to
+      less -FXRS
+}
+
+alias glog="pretty_git_log"
+alias gs="git status"
+alias gss="git status -s"
+alias gco="git checkout"
