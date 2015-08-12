@@ -12,3 +12,6 @@ fi
 
 # Customize to your needs...
 source $HOME/.githelpers
+
+# aliases
+alias bup="brew update && brew upgrade && brew cleanup"
