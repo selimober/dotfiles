@@ -15,6 +15,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   brew install homebrew/dupes/grep
 
   brew install icdiff
+  brew install node
 
   brew cleanup
 
