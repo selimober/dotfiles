@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-source functions.sh
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  install_brew
+  if test ! $(xcode-select -p); then
+    echo "Installing xcode command line tools"
+    xcode-select --install
+  else
+    echo "Xcode command line tools already installed. Skipping.."
+  fi
+  if test ! $(which brew); then
+    echo "Installing homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "Homebrew already installed. Skipping.."
+  fi
 
-  # installing brew packages
-  brew install coreutils
-  brew install findutils
-  brew install bash
+  # TODO git pull if .dotfiles exist
+  git clone git@github.com:selimober/dotfiles.git $HOME/.dotfiles
 
-  # Install more recent versions of some OS X tools
-  brew tap homebrew/dupes
-  brew install homebrew/dupes/grep
-
-  brew install icdiff
-  brew install node
-
-  brew cleanup
+  source $HOME/.dotfiles/scripts/bootsrap.sh
 
 fi
