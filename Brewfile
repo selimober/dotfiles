@@ -1,8 +1,10 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
+tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
+tap 'homebrew/versions'
 
 brew 'readline'
 brew 'bash'
@@ -22,7 +24,7 @@ brew 'gotags'
 brew 'httpie'
 brew 'icdiff'
 brew 'leiningen'
-brew 'macvim', args: ['with-override-system-vim']
+# brew 'macvim', args: ['with-override-system-vim']
 brew 'node'
 brew 'tree'
 brew 'unrar'
@@ -34,7 +36,6 @@ cask 'adobe-reader'
 cask 'alfred'
 cask 'anki'
 cask 'atom'
-cask 'ccmenu'
 cask 'dash'
 cask 'dropbox'
 cask 'evernote'

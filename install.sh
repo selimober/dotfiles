@@ -1,22 +1,27 @@
 #!/usr/bin/env bash
 
+set -e
+
+source scripts/functions.sh
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  if test ! $(xcode-select -p); then
-    echo "Installing xcode command line tools"
-    xcode-select --install
-  else
-    echo "Xcode command line tools already installed. Skipping.."
-  fi
-  if test ! $(which brew); then
-    echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  else
-    echo "Homebrew already installed. Skipping.."
-  fi
+  install_xcode
+  install_brew
 
-  # TODO git pull if .dotfiles exist
-  git clone git@github.com:selimober/dotfiles.git $HOME/.dotfiles
+  echo "› brew bundle"
+  brew bundle
 
-  source $HOME/.dotfiles/scripts/bootsrap.sh
+  clone_dotfiles_from_github
+
+  echo "> installing zprezto"
+  /bin/zsh zsh/install.sh
+
+  echo "> setting up vim"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo ~/.vim/colors/badwolf.vim --create-dirs \
+    https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
+  echo "alias vi=vi -u $HOME/.dotfiles/vim/.vimrc" >> $HOME/.zprofile
+  vim -u $HOME/.dotfiles/vim/.vimrc +PlugInstall +qall
 
 fi
