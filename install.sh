@@ -64,14 +64,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   install_brew
 
   echo ""
-  echo "› brew bundle"
-  brew bundle --file=$HOME/.dotfiles/Brewfile
-
-  echo ""
   echo "> Running software update"
   sudo softwareupdate --install --all
 
   clone_dotfiles_from_github
+
+  echo ""
+  echo "› brew bundle"
+  brew bundle --file=$HOME/.dotfiles/Brewfile
 
   echo ""
   echo "> installing zprezto"
