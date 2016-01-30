@@ -87,6 +87,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   vim -u $HOME/.dotfiles/vim/.vimrc +PlugInstall +qall
 
+  echo "source $HOME/.dotfiles/vim/.vim/helper.vim" >> $HOME/.dotfiles/vim/.vimrc
+  echo "source $HOME/.dotfiles/vim/.vim/settings.vim" >> $HOME/.dotfiles/vim/.vimrc
+  echo "source $HOME/.dotfiles/vim/.vim/mappings.vim" >> $HOME/.dotfiles/vim/.vimrc
+  echo "source $HOME/.dotfiles/vim/.vim/colors.vim" >> $HOME/.dotfiles/vim/.vimrc
+
   echo "> Decreasing default sudo password timeout to 5 minutes"
   sudo bash -c 'echo "Defaults    timestamp_timeout=5" | (EDITOR="tee -a" visudo)'
 fi

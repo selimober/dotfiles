@@ -43,7 +43,3 @@ call plug#end()
 
 filetype plugin indent on    " required
 
-source $HOME/.dotfiles/vim/.vim/helper.vim
-source $HOME/.dotfiles/vim/.vim/settings.vim
-source $HOME/.dotfiles/vim/.vim/mappings.vim
-source $HOME/.dotfiles/vim/.vim/colors.vim
