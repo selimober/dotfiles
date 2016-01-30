@@ -55,11 +55,6 @@ function clone_dotfiles_from_github {
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
-  echo "> Triggering sudo to get the password"
-  sudo echo ""
-  echo "> Increasing default sudo password timeout to 1 hour"
-  sudo bash -c 'echo "Defaults    timestamp_timeout=-60" | (EDITOR="tee -a" visudo)'
-
   install_xcode
   install_brew
 
@@ -92,6 +87,4 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   echo "source $HOME/.dotfiles/vim/.vim/mappings.vim" >> $HOME/.dotfiles/vim/.vimrc
   echo "source $HOME/.dotfiles/vim/.vim/colors.vim" >> $HOME/.dotfiles/vim/.vimrc
 
-  echo "> Decreasing default sudo password timeout to 5 minutes"
-  sudo bash -c 'echo "Defaults    timestamp_timeout=5" | (EDITOR="tee -a" visudo)'
 fi
