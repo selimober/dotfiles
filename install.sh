@@ -65,7 +65,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   echo ""
   echo "› brew bundle"
-  brew bundle
+  brew bundle --file=$HOME/.dotfiles/Brewfile
 
   echo ""
   echo "> Running software update"
