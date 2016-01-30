@@ -73,6 +73,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   /bin/zsh $HOME/.dotfiles/zsh/install.sh
 
   echo ""
+  echo "> setting up Go 1.5.3"
+  sudo -s 'curl https://storage.googleapis.com/golang/go1.5.3.darwin-amd64.tar.gz | tar xz -C /usr/local'
+  echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.zprofile
+  echo 'export GOPATH=$HOME/prj/go'
+
+  echo ""
   echo "> setting up vim"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
