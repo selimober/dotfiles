@@ -24,7 +24,7 @@ brew 'gotags'
 brew 'httpie'
 brew 'icdiff'
 brew 'leiningen'
-# brew 'macvim', args: ['with-override-system-vim']
+brew 'macvim', args: ['with-override-system-vim']
 brew 'node'
 brew 'tree'
 brew 'unrar'
