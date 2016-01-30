@@ -75,7 +75,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   echo ""
   echo "> installing zprezto"
-  /bin/zsh zsh/install.sh
+  /bin/zsh $HOME/.dotfiles/zsh/install.sh
 
   echo ""
   echo "> setting up vim"
