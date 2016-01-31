@@ -74,9 +74,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   echo ""
   echo "> setting up Go 1.5.3"
-  sudo -s 'curl https://storage.googleapis.com/golang/go1.5.3.darwin-amd64.tar.gz | tar xz -C /usr/local'
   echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.zprofile
-  echo 'export GOPATH=$HOME/prj/go'
+  echo 'export GOPATH=$HOME/prj/go' >> $HOME/.zprofile
 
   echo ""
   echo "> setting up vim"
@@ -84,9 +83,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   curl -fLo ~/.vim/colors/badwolf.vim --create-dirs \
     https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
-  echo "alias vi=vi -u $HOME/.dotfiles/vim/.vimrc" >> $HOME/.zprofile
+  echo 'alias vi="vi -u $HOME/.dotfiles/vim/.vimrc"' >> $HOME/.zprofile
 
   vim -u $HOME/.dotfiles/vim/.vimrc +PlugInstall +qall
+  $HOME/.vim/plugged/YouCompleteMe/install.py --clang-completer --gocode-completer --tern-completer
 
   echo "source $HOME/.dotfiles/vim/.vim/helper.vim" >> $HOME/.dotfiles/vim/.vimrc
   echo "source $HOME/.dotfiles/vim/.vim/settings.vim" >> $HOME/.dotfiles/vim/.vimrc
