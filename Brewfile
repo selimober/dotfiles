@@ -6,7 +6,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 
-breww 'cmake'
+brew 'cmake'
 brew 'readline'
 brew 'bash'
 brew 'coreutils'
