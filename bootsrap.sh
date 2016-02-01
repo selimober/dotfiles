@@ -50,4 +50,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   clone_dotfiles_from_github
 
+  ./scripts/install.sh
 fi
