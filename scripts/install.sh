@@ -2,8 +2,8 @@
 
 set -e
 
-source defaults.sh
-source functions.sh
+source $HOME/.dotfiles/scripts/$HOME/.dotfiles/scripts/defaults.sh
+source $HOME/.dotfiles/scripts/$HOME/.dotfiles/scripts/functions.sh
 
 install_brew
 software_update
