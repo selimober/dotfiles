@@ -11,4 +11,7 @@ if [[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]]; then
 
   chsh -s /bin/zsh
 
+  echo 'source $HOME/.dotfiles/git/githelpers'
+  cp $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+
 fi

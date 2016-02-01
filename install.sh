@@ -55,14 +55,19 @@ function clone_dotfiles_from_github {
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
+  sudo -v
   install_xcode
+
+  clone_dotfiles_from_github
+
+  sudo -v
+  /bin/bash $HOME/.dotfiles/scripts/bootsrap.sh
   install_brew
 
   echo ""
   echo "> Running software update"
   sudo softwareupdate --install --all
 
-  clone_dotfiles_from_github
 
   echo ""
   echo "› brew bundle"
