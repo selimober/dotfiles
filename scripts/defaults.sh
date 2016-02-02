@@ -6,14 +6,11 @@ function setup_system_defaults {
   # show IP address in the login screen
   sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo IPAddress
 
-  # revert back to real "natural scrolling"
-  defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
   # enable keyboard access for all controls
   defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
   # speed up the keyboard
-  defaults write NSGlobalDomain InitialKeyRepeat -int 4
+  defaults write NSGlobalDomain InitialKeyRepeat -int 12
   defaults write NSGlobalDomain KeyRepeat -int 0
 
   # disable re-opening apps on logon
@@ -34,5 +31,8 @@ function setup_system_defaults {
 
   # Show the ~/Library folder.
   chflags nohidden ~/Library
+
+  # use all f1-12 keys as standard function keys
+  defaults write -g com.apple.keyboard.fnState -boolean true
 
 }

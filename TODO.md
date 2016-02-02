@@ -1,5 +1,19 @@
-* [ ] Schedule updating zprezto in intervals
-* [ ] git pull if .dotfiles directory exists
+* [] Schedule updating zprezto in interval
+* [] git pull if .dotfiles directory exists
+* [] generate private keys
+* [] remove xcode installation steps, just make sure it's installed
+* [] switch to topic based installation
+* [] create a dot.sh to update setup
+  - [] zpresto and brew updates
+* [] tap to click, defaults
+* [] git aliases are not installed
+* [] docker tools, machine etc...
+* [] don't ask are you sure to shutdown
+* [] disable guest user
+* [] screen resolution
+* [] hide dock
+* [] intellij plugins & settings
+* [] better README.md
+* [x] use  F1-F12 without fn key
 * [x] full xcode setup required for macvim. it's commented out for now
 * [x] appending source block end of .vimrc makes the repository (.dotfiles) dirty. find another way
-* [ ] generate private keys
