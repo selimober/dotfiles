@@ -35,4 +35,6 @@ function setup_system_defaults {
   # use all f1-12 keys as standard function keys
   defaults write -g com.apple.keyboard.fnState -boolean true
 
+  # change the screensot image format to jpg, defaults to png and higher quality
+  defaults write com.apple.screencapture type jpg; killall SystemUIServer
 }
