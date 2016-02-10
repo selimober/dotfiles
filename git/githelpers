@@ -24,6 +24,10 @@ pretty_git_log() {
       less -FXRS
 }
 
+gi() {
+  curl -L -s https://www.gitignore.io/api/\$@ ;
+}
+
 alias glog="pretty_git_log"
 alias gs="git status"
 alias gss="git status -s"

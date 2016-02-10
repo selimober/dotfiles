@@ -6,7 +6,6 @@
 * [] create a dot.sh to update setup
   - [] zpresto and brew updates
 * [] tap to click, defaults
-* [] git aliases are not installed
 * [] docker tools, machine etc...
 * [] don't ask are you sure to shutdown
 * [] disable guest user
@@ -14,8 +13,9 @@
 * [] hide dock
 * [] intellij plugins & settings
 * [] better README.md
-* [] my git aliases, gs, glog, etc
 * [] change hostname / machine name
+* [] remove git setup from zsh setup
+* [x] my git aliases, gs, glog, etc
 * [x] use  F1-F12 without fn key
 * [x] full xcode setup required for macvim. it's commented out for now
 * [x] appending source block end of .vimrc makes the repository (.dotfiles) dirty. find another way

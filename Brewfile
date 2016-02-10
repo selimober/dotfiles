@@ -34,6 +34,7 @@ brew 'wget'
 brew 'zsh'
 brew 'the_silver_searcher'
 brew 'homebrew/dupes/grep'
+brew 'keybase'
 
 cask 'adobe-reader'
 cask 'alfred'
