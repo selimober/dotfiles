@@ -14,8 +14,10 @@ map <C-n> :NERDTreeToggle<CR>
 nmap ,n :NERDTreeFind<CR>
 
 " Insert new line without entering insert mode
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+
+" Cosco, comma and semicolon insertion
+autocmd FileType javascript,css inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css nnoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -34,10 +36,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" Cosco
-autocmd FileType javascript,css inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css nnoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 """"""""""""""""""""""""""""""
 " => Go

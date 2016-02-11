@@ -186,8 +186,8 @@ let g:tagbar_type_go = {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DelimitMate
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let delimitMate_expand_cr = 1
-let delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -214,4 +214,4 @@ let g:UltiSnipsListSnippets="<c-e>"
 " this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
