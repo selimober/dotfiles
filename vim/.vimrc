@@ -37,6 +37,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'xml', 'xhtml']}
 Plug 'lfilho/cosco.vim', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim' ,{ 'for': 'Javascript' }
 
 " Go
 Plug 'fatih/vim-go', {'for': 'go'}

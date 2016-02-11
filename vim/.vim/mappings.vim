@@ -37,7 +37,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " Cosco
 autocmd FileType javascript,css inoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css nnoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR>
 
 """"""""""""""""""""""""""""""
 " => Go
