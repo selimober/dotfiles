@@ -4,8 +4,7 @@
 " Enable syntax highlighting
 syntax enable
 
-colorscheme badwolf
-set background=dark
+colorscheme onedark
 
 " Set extra options when running in GUI mode
 if has("gui_running")

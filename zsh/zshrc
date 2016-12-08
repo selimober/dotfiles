@@ -11,7 +11,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source $HOME/.githelpers
+source $HOME/.dotfiles/git/githelpers
+
+fpath=(~/.zfunc $fpath)
+
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # aliases
 alias bup="brew update && brew upgrade && brew cleanup"
+alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
+alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
+
+# without this reattaching to tmux makes the screen unresponsive
+# https://gitlab.com/gnachman/iterm2/issues/3995
+setopt HUP
+
+export PATH=$HOME/prj/go/bin::$PATH:/usr/local/go/bin
+export GOPATH=$HOME/prj/go

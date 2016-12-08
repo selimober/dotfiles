@@ -4,7 +4,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Clojure, Java
-Plug 'tpope/vim-classpath', { 'for': ['clojure', 'java'] }
+" Plug 'tpope/vim-classpath', { 'for': ['clojure', 'java'] }
 
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
@@ -26,6 +26,7 @@ Plug 'SirVer/ultisnips'
 
 " Navigation
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 
@@ -38,10 +39,17 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'xml', 'xhtml']}
 Plug 'lfilho/cosco.vim', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim' ,{ 'for': 'Javascript' }
+Plug 'digitaltoad/vim-pug' ,{ 'for': 'pug' }
 
 " Go
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'majutsushi/tagbar', {'for': 'go'}
+
+" Custom
+Plug '~/prj/self/autohighlight'
+
+" Theme
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 

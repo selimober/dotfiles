@@ -10,7 +10,7 @@ function setup_system_defaults {
   defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
   # speed up the keyboard
-  defaults write NSGlobalDomain InitialKeyRepeat -int 12
+  defaults write NSGlobalDomain InitialKeyRepeat -int 14
   defaults write NSGlobalDomain KeyRepeat -int 0
 
   # disable re-opening apps on logon
