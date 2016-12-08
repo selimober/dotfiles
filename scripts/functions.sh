@@ -48,9 +48,11 @@ function setup_vi {
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   curl -fLo ~/.vim/colors/badwolf.vim --create-dirs \
     https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
-  echo 'alias vi="vi -u $HOME/.dotfiles/vim/.vimrc"' >> $HOME/.zprofile
 
-  vim -u $HOME/.dotfiles/vim/.vimrc +PlugInstall +qall
+  alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
+
+  vi -u $HOME/.dotfiles/vim/.vimrc +PlugInstall +qall
+  cp $HOME/.dotfiles/vim/tern-project $HOME/.tern-project
   $HOME/.vim/plugged/YouCompleteMe/install.py --clang-completer --gocode-completer --tern-completer
 }
 

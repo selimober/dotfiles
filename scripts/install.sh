@@ -17,7 +17,6 @@ setup_system_defaults
 echo "---------------------"
 echo "Installation complete, following apps need to be installed manually:"
 echo "- owly"
-echo "- reeder"
 echo "- keynote"
 echo "- sizeup"
 
