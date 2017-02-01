@@ -55,6 +55,11 @@ call plug#end()
 
 filetype plugin indent on    " required
 
+" temporary hack because of a regression in macOSx Sierra
+" see: https://github.com/tmux/tmux/issues/543#issuecomment-248980734
+set clipboard=unnamed
+
+
 source $HOME/.dotfiles/vim/.vim/helper.vim
 source $HOME/.dotfiles/vim/.vim/settings.vim
 source $HOME/.dotfiles/vim/.vim/mappings.vim
