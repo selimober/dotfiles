@@ -9,5 +9,6 @@
     ui = true
 [core]
 	  editor = vi
+    excludesfile = ~/.gitignore_global
 [alias]
 	  dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"

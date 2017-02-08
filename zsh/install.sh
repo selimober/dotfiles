@@ -13,5 +13,6 @@ if [[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]]; then
 
   cp $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
   cp $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
+  cp $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
 
 fi
