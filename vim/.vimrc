@@ -46,7 +46,7 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'majutsushi/tagbar', {'for': 'go'}
 
 " Custom
-Plug '~/prj/self/autohighlight'
+" Plug '~/prj/self/autohighlight'
 
 " Theme
 Plug 'joshdick/onedark.vim'
