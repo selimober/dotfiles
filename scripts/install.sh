@@ -11,6 +11,7 @@ brew_bundle
 npm_packages
 install_zprezto
 setup_go
+setup_clj
 setup_vi
 setup_system_defaults
 

@@ -25,7 +25,7 @@ function brew_bundle {
 }
 
 function npm_packages {
-  npm install -g cloc nativefier
+  npm install -g cloc nativefier tern-jsx
 }
 
 function install_zprezto {
@@ -39,6 +39,13 @@ function setup_go {
   echo "> setting up Go 1.5.3"
   echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.zprofile
   echo 'export GOPATH=$HOME/prj/go' >> $HOME/.zprofile
+}
+
+function setup_clj {
+  echo ""
+  echo "> setting defaul lein profiles"
+  mkdir -p $HOME/.lein
+  cp $HOME/.dotfiles/profiles.clj $HOME/.lein/profiles.clj
 }
 
 function setup_vi {

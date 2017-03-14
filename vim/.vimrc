@@ -3,6 +3,8 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'airblade/vim-gitgutter'
+
 " Clojure, Java
 " Plug 'tpope/vim-classpath', { 'for': ['clojure', 'java'] }
 
@@ -38,6 +40,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'xml', 'xhtml']}
 Plug 'lfilho/cosco.vim', { 'for': 'javascript' }
+Plug 'vim-syntastic/syntastic', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim' ,{ 'for': 'Javascript' }
 Plug 'digitaltoad/vim-pug' ,{ 'for': 'pug' }
 

@@ -117,7 +117,7 @@ set splitright
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp\|android/app/build'
 
 let g:ctrlp_working_path_mode = 'ra'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,13 +183,29 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tern
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tern_map_keys = 1
+let g:tern_show_argument_hints='on_hold'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DelimitMate
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+" a hack to trick syntastic to use local eslint
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Handle Ultisnips and YouCompleteMe expansion with tab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
