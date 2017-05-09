@@ -1,0 +1,23 @@
+# Defines environment variables.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Ensure that a non-login, non-interactive shell has a defined environment.
+if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile"
+fi
+
+setopt HIST_IGNORE_DUPS
+
+# aliases
+alias bup="brew update && brew upgrade && brew cleanup"
+alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
+alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
+
+export PATH=$HOME/prj/go/bin::$PATH:/usr/local/go/bin
+export GOPATH=$HOME/prj/go
+export ANDROID_HOME=${HOME}/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools

@@ -21,14 +21,6 @@ fpath=(~/.zfunc $fpath)
 # remove dups from history
 setopt HIST_IGNORE_DUPS
 
-# aliases
-alias bup="brew update && brew upgrade && brew cleanup"
-alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
-alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
-
 # without this reattaching to tmux makes the screen unresponsive
 # https://gitlab.com/gnachman/iterm2/issues/3995
 setopt HUP
-
-export PATH=$HOME/prj/go/bin::$PATH:/usr/local/go/bin
-export GOPATH=$HOME/prj/go
