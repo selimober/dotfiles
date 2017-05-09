@@ -117,7 +117,7 @@ set splitright
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp\|android/app/build'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp\|android/app/build\|target\|ios/build'
 
 let g:ctrlp_working_path_mode = 'ra'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -195,6 +195,12 @@ let g:tern_show_argument_hints='on_hold'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => airblade/vim-gitgutter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim tracks file with an innterval of 4 secs, let's make it smaller
+set updatetime=250
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic

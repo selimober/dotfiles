@@ -11,7 +11,7 @@ Plug 'airblade/vim-gitgutter'
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
-Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
+" Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'gregspurrier/vim-midje', { 'for': 'clojure' }
 " Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
@@ -42,7 +42,7 @@ Plug 'mattn/emmet-vim', {'for': ['javascript.jsx', 'html', 'xml', 'xhtml']}
 Plug 'lfilho/cosco.vim', { 'for': 'javascript' }
 Plug 'vim-syntastic/syntastic', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim' ,{ 'for': 'Javascript' }
-Plug 'digitaltoad/vim-pug' ,{ 'for': 'pug' }
+Plug 'flowtype/vim-flow', { 'for': 'Javascript' }
 
 " Go
 Plug 'fatih/vim-go', {'for': 'go'}
