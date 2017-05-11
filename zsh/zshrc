@@ -28,3 +28,4 @@ setopt HUP
 # aliases
 alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
 alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
+alias emacs="emacs -nw"
