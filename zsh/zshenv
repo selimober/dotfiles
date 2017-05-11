@@ -9,15 +9,18 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+
 setopt HIST_IGNORE_DUPS
 
-# aliases
-alias bup="brew update && brew upgrade && brew cleanup"
-alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
-alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
 
-export PATH=$HOME/prj/go/bin::$PATH:/usr/local/go/bin
+export PATH=/usr/local/bin:$HOME/.rbenv/bin:$HOME/prj/go/bin:$PATH:/usr/local/go/bin
 export GOPATH=$HOME/prj/go
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+
+export RUBY_CONFIGURE_OPTS="--with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
+eval "$(rbenv init -)"

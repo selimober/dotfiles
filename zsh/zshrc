@@ -25,4 +25,6 @@ setopt HIST_IGNORE_DUPS
 # https://gitlab.com/gnachman/iterm2/issues/3995
 setopt HUP
 
-eval "$(rbenv init -)"
+# aliases
+alias vi="mvim -v -u $HOME/.dotfiles/vim/.vimrc"
+alias gometalinter="gometalinter --exclude=\".*should have comment.*\""
