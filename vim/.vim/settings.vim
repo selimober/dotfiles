@@ -15,6 +15,10 @@ set autoread
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 autocmd BufWritePre * :FixWhitespace
+
+" Show line numbers
+set nu
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,10 +133,14 @@ let NERDTreeIgnore=['node_modules', '.git', 'tmp']
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set clipboard sync
-set clipboard=unnamed
+set clipboard^=unnamed
 
-" Ag
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ag
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ag_working_path_mode="r"
+" Ag jumps to the first result in buffer, this disables it
+ca Ag Ag!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-jsx

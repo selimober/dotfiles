@@ -24,3 +24,5 @@ setopt HIST_IGNORE_DUPS
 # without this reattaching to tmux makes the screen unresponsive
 # https://gitlab.com/gnachman/iterm2/issues/3995
 setopt HUP
+
+eval "$(rbenv init -)"

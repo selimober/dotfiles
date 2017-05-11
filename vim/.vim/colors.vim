@@ -5,7 +5,7 @@
 syntax enable
 
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 " Set extra options when running in GUI mode
 if has("gui_running")

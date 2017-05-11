@@ -3,7 +3,9 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+" Git
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Clojure, Java
 " Plug 'tpope/vim-classpath', { 'for': ['clojure', 'java'] }
@@ -14,8 +16,8 @@ Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 " Plug 'kien/rainbow_parentheses.vim', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'gregspurrier/vim-midje', { 'for': 'clojure' }
-" Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
-" Plug 'guns/vim-sexp', { 'for': 'clojure' }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'clojure' }
+Plug 'guns/vim-sexp', { 'for': 'clojure' }
 
 " General
 Plug 'tpope/vim-repeat'
