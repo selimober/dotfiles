@@ -16,5 +16,6 @@ if [[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]]; then
   cp $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
   cp $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
   cp $HOME/.dotfiles/git/gitignore_global $HOME/.gitignore_global
+  cp $HOME/.dotfiles/spacemacs $HOME/.spacemacs
 
 fi

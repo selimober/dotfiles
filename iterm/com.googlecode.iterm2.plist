@@ -57,11 +57,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 477 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>285 285 1016 502 0 0 1680 1027 </string>
+	<string>156 130 1016 502 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 9 1676 1013 0 0 1680 1027 </string>
+	<string>3 11 1274 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>136 307 570 452 0 0 1680 1027 </string>
+	<string>3 11 1274 758 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>2 9 1676 1013 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -630,9 +632,9 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>SourceCodePro-Regular 13</string>
 			<key>Option Key Sends</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -764,7 +766,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-03T16:14:17Z</date>
+	<date>2017-05-09T20:02:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>findIgnoreCase_iTerm</key>
