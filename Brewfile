@@ -62,3 +62,4 @@ cask 'the-unarchiver'
 cask 'toggldesktop'
 cask 'transmission'
 cask 'vlc'
+cask 'qlmarkdown'           # QuickLook markdown preview for Finder
